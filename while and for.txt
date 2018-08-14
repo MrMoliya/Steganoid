@@ -1,0 +1,343 @@
+	pow(2,3)
+
+#show list of function
+dir(__builtins__)
+data = int(input("enter value "))
+import math
+math.sqrt(3)
+root= math.sqrt
+root(9)
+
+#String
+s1='i am himanshu'
+s2="i am himanshu"
+s3="""i am himanshu"""
+
+#LIST
+>>> names = ['himanshu','moliya']
+
+>>> names
+['himanshu', 'moliya']
+
+>>> names[1]
+'moliya'
+
+>>> names[-1]
+'moliya'
+
+>>> names.append('meera')
+
+>>> names
+['himanshu', 'moliya', 'meera']
+
+>>> age =[19,20,26]
+
+>>> names.extend(age)
+
+>>> names
+['himanshu', 'moliya', 'meera', 19, 20, 26]
+
+>>> age
+[19, 20, 26]
+
+>>> names.remove('moliya')
+>>> names
+['himanshu', 'meera', 19, 20, 26]
+
+>>> print(names,age)
+['himanshu', 'meera', 19, 20, 26] [19, 20, 26]
+
+>>> len(names)
+5
+
+>>> mylist= [0,1,2,3,4,5,6,7,8,9]
+>>> mylist
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+>>> mylist[3-5]
+8
+>>> mylist[4:8]
+[4, 5, 6, 7]
+>>> mylist[:5]
+[0, 1, 2, 3, 4]
+>>> mylist[:]
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+>>> mylist[::2]
+[0, 2, 4, 6, 8]
+>>> mylist[::5]
+[0, 5]
+>>> mylist[::-1]
+[9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
+
+>>> 9=10
+SyntaxError: can't assign to literal
+>>> 9!=10
+True
+>>> 9==10
+False
+>>> 9<10
+True
+>>> 9=>10
+SyntaxError: invalid syntax
+>>> 9>=10
+False
+>>> 9<10 and 9==10
+False
+>>> 9<10 or 9==10
+True
+>>> string="himanshu"
+>>> 'd' in string
+False
+>>> 'a' in string
+True
+>>> a=[1,2,3]
+>>> b=[1,2,3]
+>>> a is b
+False
+>>> c=d=[1,2,3]
+>>> c is d
+True
+
+# while Loop
+a=1
+s=0
+print("enter no to add the sum.")
+print("enter 0 for quit.")
+while a!=0:
+    print('Current sum : ',s)
+    a=float(input('Number : '))
+    s+=a;
+print('Total Sum = ',s)
+
+
+
+# for loop
+b=[1,6,8,4,6,5,3]
+for i in b:
+	print(num)
+
+#FUNCTION
+def himanshu (name):
+    print("hello",name)
+
+>>> himanshu("meera")
+hello meera
+
+>>> def add(x,y):
+	return (x+y)
+
+>>> add(100,500)
+600
+
+>>> sum=add(3,6)
+>>> sum
+9
+
+def himanshu (name='Moliya'):#Function with default value
+    print("hello",name)
+>>>himanshu()
+hello Moliya
+
+#multiple argument
+def himanshu(name='Moliya',*score):
+    print("hello",name)
+    print(score)
+>>> himanshu('lalu',22,66,88)
+hello lalu
+(22, 66, 88)
+
+#CLASS
+class Person:
+    def __init__(self): #Constructor
+        print ("class is created")
+    def __del__(self):  #destructor
+        print("class instance is destroyed")
+    def setFullName(self,fName,lName):
+        self.fName=fName
+        self.lName=lName
+    def printFullName(self):
+        print(self.fName," ",self.lName)
+
+himanshu = Person() #create object / instance
+himanshu.setFullName("Himanshu","Moliya")
+himanshu.printFullName()
+himanshu.__del__()  #delete instance
+
+#PARMETERIZE CONSTUCTOR
+class Person:
+    def __init__(self,id): #Constructor
+        self.id=id
+        print ("class is created")
+    def __del__(self):#destructor
+        print(self.id,"class instance is destroyed")
+    def setFullName(self,fName,lName):
+        self.fName=fName
+        self.lName=lName
+    def printFullName(self):
+        print(self.fName," ",self.lName)
+
+himanshu = Person(1) #create object / instance
+himanshu.setFullName("Himanshu","Moliya")
+himanshu.printFullName()
+himanshu.__del__()  #delete instance
+
+#Subclasses , Superclasses and Inheritance
+class Parent:
+    value1 = "this is 1st value"
+    value2 = "this is 2nd value"
+
+class Child(Parent):
+    pass
+
+father = Parent()
+print(father.value1)
+himanshu = Child()
+print(himanshu.value2)
+
+:::::::::::::::::::REVERSE Array::::::::::::::
+n = int(input()) 
+list=[]
+
+for i in range(0,n) :
+
+    list.append(int(input()))
+
+for i in reversed(list):
+
+    print(i)
+
+:::::::::::::::::Multidimantional array example::::::::::::::
+w, h = map(int, input().split())  
+a = [[int(j) for j in input().split()] for i in range(w)]
+a=[*zip(*a)]
+for k in range(h):
+    print (' '.join(map(str, a[k][::])))
+
+::::::::::::::::Count the number of occurrences of all the digits in the string S.:::::::::::::::::
+string = input()
+for i in range(10):
+    count = 0
+    for j in string:
+        if i == int(j):
+            count+=1
+    print(i,count)
+
+::::::::::::::::::Given a number N, print the number of set bits in the binary representation of this number.::::::::::::::
+T = int(input())
+for _ in range(T):
+    N = int(input())
+    count = 0
+    while N:
+        N &= (N - 1)
+        count += 1
+    print(count)
+
+::::::::::::::::You have been given an array of size N consisting of integers. In addition you have been given an element M you need to find and print the index of the last occurrence of this element M in the array if it exists in it, otherwise print -1. Consider this array to be 1 indexed.::::::::::::::::::
+a=[]
+z,b=input().split()
+a=input().split()
+a.reverse()
+c=len(a)-a.index(b)
+print(c)
+
+
+::::::::print array without comma and bracket ::::::::::::
+print(*name)
+
+:::::::::::some of all element of array:::::::::::::::
+n = int(input())
+arr = list(map(int,input().split()))
+s = 0
+for a in arr:
+    s = s + a
+print(s)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+:::::::::::::::::::::You are assigned to develop a cipher program to encrypt the message. Your cipher must rotate every character in the message by a fixed number making it unreadable by enemies::::::::::::::::::
+def encrypt(text,s):
+    result = ""
+ 
+    # traverse text
+    for i in range(len(text)):
+        char = text[i]
+        if((ord(char) >= 48 and ord(char) < 58) or (ord(char)> 64 and ord(char)<= 90) or (ord(char)>96 and ord(char)<=122)):
+            # Encrypt uppercase characters
+            if (char.isupper()):
+                result += chr((ord(char) + s-65) % 26 + 65)
+ 
+                # Encrypt lowercase characters
+            elif(char.islower()):
+                result += chr((ord(char) + s - 97) % 26 + 97)
+            else:
+                result += chr((ord(char) + s - 48) % 10 + 48)
+        else:
+            result +=char
+        
+    return result
+ 
+#check the above function
+text = input()
+s= int(input())
+
+print (encrypt(text,s))
+
+
+
+::::::::::::::::Magical word ascii + nearest prime number::::::::::::::
+def check_prime(a):
+   for i in range(2, a):
+      if a % i == 0:
+         return False
+   return True
+
+def find_next_prime(n):
+    if check_prime(n):
+        return n
+    else:
+        low = n - 1
+        high = n + 1
+        while True:
+            if check_prime(low) and (low>64):
+                return low
+            elif check_prime(high) and (high < 123):
+                return high
+            else:
+                low -= 1
+                high += 1
+
+t=int(input())
+for _ in range(t):
+    s=int(input())
+    text=input()
+    result = ""
+    i=0
+    for i in range(s):
+        num = ord(text[i])
+        result+=chr(find_next_prime(num))
+        i+=1
+    print(result.strip())
+
+
+
+
